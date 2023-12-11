@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&subset=greek-ext');
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+    z-index: 3;
+    background-color: rgb(65, 65, 78);
+    color: white;
+    height: 100px;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: flex-start;
+    margin-left: auto;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-right: 160px;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-fluid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+.content-wrapper {
+    flex: 1;
+}
+
+.home {
+    display: flex;
+    position: fixed;
+    z-index: 1;
+    /*background: #000 url('../images/All-of-Us-Are-Dead.gif') no-repeat center center;*/
+    background-size: 80% auto;
+    width: 100vw;
+    height: 100vh;
+}
+
+.title {
+    color: rgb(42, 140, 129);
+    margin-bottom: 20px;
+}
+
+.title-indent {
+    margin-left: 110px;
+    color: rgb(42, 140, 129);
+    margin-bottom: 20px;
+}
+
+.text-green {
+    color: rgb(42, 140, 129) !important;
+}
+
+.table-title {
+    margin-top: 40px;
+    color: black;
+    margin-bottom: 40px;
+}
+
+button.btn-outline-success {
+    width: 100px;
+    white-space: nowrap;
+    margin-right: 30px;
+}
+
+.btn {
+    margin-right: 10px;
+}
+
+.table {
+    color: black;
+}
+
+
+    
+  /* List Box + Scrollbar Formatting Start */
+  
+  .allbooks-box{
+      position:absolute;
+      left:50%;
+      top:50%;
+      transform: translate(-50%,-50%);
+      border-radius:3px;
+  }
+  
+  .scrollbar {
+    width: 95%;
+    height: 70%;
+    overflow: auto;
+    padding:20px 80px;
+  }
+  
+  .create-box {
+      position:absolute;
+      left:50%;
+      top:52%;
+      transform: translate(-50%,-50%);
+      border-radius:3px;
+  }
+  
+  .scrollbar2 {
+    width: 90%;
+    height: 80%;
+    overflow: auto;
+    padding:50px 80px;
+    z-index: 10;
+  }
+  
+  #scrollbar1::-webkit-scrollbar {
+    width: 16px;
+  }
+  
+  #scrollbar1::-webkit-scrollbar-track {
+    border-radius: 8px;
+    background-color: #e7e7e7;
+    border: 1px solid #cacaca;
+  }
+  
+  #scrollbar1::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    border: 3px solid transparent;
+    background-clip: content-box;
+    background-color: rgb(174, 65, 112);
+  }
+  
+  /* List Box + Scrollbar Formatting End */
+  
+  /* Message Area (Success/Error) Formatting Start */
+  
+  .alert-message {
+    animation-name: fadeOut;
+    animation-duration: 10s; /* Duration should match the desired delay */
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; display: none; }
+  }
+  
+  /* Table Formatting Start */
+  
+  .custom-col-width {
+    width: 80%;
+  }
+  
+  .table {
+    border-collapse: collapse;
+    border: 1px solid white;
+  }
+  .th  {
+    border-bottom: 2px solid rgb(72, 72, 72);
+    padding: 8px;
+    font-size: large;
+    color: rgb(174, 65, 112);
+  }
+  
+  .td {
+    border-bottom: 2px solid rgb(72, 72, 72);
+    padding: 8px;
+  }
+  
+  .fixed-header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: black;
+  }
+
+/* Hover effect for rows */
+.table tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 600px) {
+    .table th, .table td {
+        display: block;
+        text-align: right;
+    }
+
+    .table th:last-child, .table td:last-child {
+        border-bottom: 0;
+    }
+}
+
+
+
+
+
+
+  .text-right {
+    text-align: right;
+}
+
+.container-for-createbutton {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.h2 {
+    color: white;
+}
+
+
+
+  .box{
+	position:absolute;
+	left:50%;
+	transform: translate(-50%,0 );
+    background-color: rgb(245, 244, 244);
+	border-radius:3px;
+	padding:50px 80px;
+  opacity: 100%;
+}
+.input-container{
+	position:relative;
+	margin-bottom:25px;
+  margin-top: 20px;
+}
+.input-container label{
+	position:relative;
+	top:0px;
+	left:0px;
+	font-size:16px;
+	color:#fff;	
+
+	transition: all 0.5s ease-in-out;
+}
+.input-container input{ 
+  border:0;
+  border-bottom:1px solid #555;  
+  background:transparent;
+  width:100%;
+  padding:8px 0 5px 0;
+  font-size:16px;
+  color:#fff;
+  
+}
+.input-container input:focus{ 
+ border:none;	
+ outline:none;
+ border-bottom:1px solid #e74c3c;	
+}
+
+.input-container1 {
+  position: relative;
+  margin: 0 auto;
+  text-align: left;
+  width: 120%;
+}
+
+.input-container1 input{ 
+  border:0;
+  border-bottom:1px solid #555;  
+  background:transparent;
+  width:100%;
+  padding:8px 0 5px 0;
+  font-size:16px;
+  color:#fff;
+  text-align: left;
+}
+
+.input-container1 input[type="text"]:read-only {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  background-color: #f8f8f8;
+  text-align: center;
+}
+
+  .main{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 200vh;
+    background-color: rgb(250, 249, 249);
+    color: rgb(34, 24, 24);
+    flex-direction: row;
+  }
