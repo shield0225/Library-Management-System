@@ -24,7 +24,7 @@ function CreateMember() {
             expiry_date
         }).then(response => {
             console.log(response.data);
-            navigate('/');
+            navigate('/members');
         }).catch(error => {
             console.error("Error posting data:", error);
         });

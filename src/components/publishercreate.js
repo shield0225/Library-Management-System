@@ -15,7 +15,7 @@ function CreatePub() {
             address
         }).then(response => {
             console.log(response.data);
-            navigate('/');
+            navigate('/publishers');
         }).catch(error => {
             console.error("Error posting data:", error);
         });

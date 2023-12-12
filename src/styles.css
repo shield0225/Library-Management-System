@@ -153,8 +153,20 @@ button.btn-outline-success {
   
   /* Table Formatting Start */
   
-  .custom-col-width {
-    width: 80%;
+  .custom-col-1 {
+    width: 25%;
+  }
+  .custom-col-2 {
+    width: 20%;
+  }
+  .custom-col-3 {
+    width: 15%;
+  }
+  .custom-col-4 {
+    width: 10%;
+  }
+  .custom-col-5 {
+    width: 5%;
   }
   
   .table {
@@ -294,3 +306,4 @@ button.btn-outline-success {
     color: rgb(34, 24, 24);
     flex-direction: row;
   }
+  

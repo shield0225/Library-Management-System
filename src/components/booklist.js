@@ -24,13 +24,13 @@ const ListBooks = () => {
 
   const setData = (data) => {
     console.log(data);
-    let { _id, title, authors, price, available, publisher_id } = data;
-    localStorage.setItem("ID", _id);
+    let { book_id, title, authors, price, available, pub_id } = data;
+    localStorage.setItem("ID", book_id);
     localStorage.setItem("Title", title);
     localStorage.setItem("Authors", authors);
     localStorage.setItem("Price", price);
     localStorage.setItem("Available", available);
-    localStorage.setItem("Publisher_id", publisher_id);
+    localStorage.setItem("Publisher", pub_id);
   };
 
   const onDelete = (_id) => {
@@ -54,11 +54,12 @@ const ListBooks = () => {
       <table className="table">
         <thead className="fixed-header">
           <tr>
-            <th className="th text-center">Title</th>
-            <th className="th text-center">Authors</th>
-            <th className="th text-center">Price</th>
-            <th className="th text-center">Available</th>
-            <th className="th text-center">Actions</th>
+            <th className="th text-center custom-col-1">Title</th>
+            <th className="th text-center custom-col-2">Authors</th>
+            <th className="th text-center custom-col-4">Price</th>
+            <th className="th text-center custom-col-5">Available</th>
+            {/* <th className="th text-center custom-col-3">Publisher</th> */}
+            <th className="th text-center custom-col-2">Actions</th>
           </tr>
         </thead>
         <tbody>
@@ -68,6 +69,7 @@ const ListBooks = () => {
               <td className="td">{data.authors}</td>
               <td className="td text-center">{data.price}</td>
               <td className="td text-center">{data.available}</td>
+              {/* <td className="td text-center">{data.pub_id ? data.pub_id.name : "No Publisher"}</td> */}
               <td>
                 <Button
                   onClick={() => handleClick(data)}

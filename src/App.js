@@ -19,10 +19,25 @@ function App() {
     <Router>
       <nav className="navbar">
         <h2 className="offset-md-1">
-          <Link to="/" className="title">
+          <Link to="/books" className="title">
             Library Management System
           </Link>
         </h2>
+
+        <div>
+          <Link to="/books" className="ui primary button">
+            Books
+          </Link>
+          <Link to="/publishers" className="ui primary button">
+            Publishers
+          </Link>
+
+          <Link to="/members" className="ui primary button">
+            Members
+          </Link>
+          <h4 style={{ color: 'red' }}>Only Get, post and delete are working at this time</h4>
+        </div>
+
         <div className="container-for-createbutton">
           <Link
             to="/books/create"
@@ -49,15 +64,15 @@ function App() {
       </nav>
       <div className="body"></div>
       <Routes>
-        <Route path="/" element={<ListBooks/>} />
-        <Route path="/books/create" element={<CreateBook/>}/>
-        <Route path="/books/update" element={<UpdateBook/>}/>
-        <Route path="/" element={<ListPublishers/>} />
-        <Route path="/publishers/create" element={<CreatePublisher/>}/>
-        <Route path="/publishers/update" element={<UpdatePublisher/>}/>
-        <Route path="/" element={<ListMembers/>} />
-        <Route path="/members/create" element={<CreateMember/>} />
-        <Route path="/members/update" element={<UpdateMember/>} />
+        <Route path="/books" element={<ListBooks />} />
+        <Route path="/books/create" element={<CreateBook />} />
+        <Route path="/books/update" element={<UpdateBook />} />
+        <Route path="/publishers" element={<ListPublishers />} />
+        <Route path="/publishers/create" element={<CreatePublisher />} />
+        <Route path="/publishers/update" element={<UpdatePublisher />} />
+        <Route path="/members" element={<ListMembers />} />
+        <Route path="/members/create" element={<CreateMember />} />
+        <Route path="/members/update" element={<UpdateMember />} />
       </Routes>
     </Router>
   );
