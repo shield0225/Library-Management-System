@@ -70,14 +70,14 @@ const ListBooks = () => {
               <td className="td text-center">{data.price}</td>
               <td className="td text-center">{data.available}</td>
               {/* <td className="td text-center">{data.pub_id ? data.pub_id.name : "No Publisher"}</td> */}
-              <td>
-                <Button
+              <td className="td text-center">
+                {/* <Button
                   onClick={() => handleClick(data)}
                   className="ui primary secondary"
                   disabled={data.available === 0}
                 >
                   Borrow
-                </Button>
+                </Button> */}
                 <Link to="/books/update">
                   <Button
                     onClick={() => setData(data)}
