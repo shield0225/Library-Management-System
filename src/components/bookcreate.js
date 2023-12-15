@@ -23,7 +23,7 @@ function CreateBook() {
             publisher_id
         }).then(response => {
             console.log(response.data);
-            navigate('/');
+            navigate('/books');
         }).catch(error => {
             console.error("Error posting data:", error);
         });
@@ -39,7 +39,7 @@ function CreateBook() {
         </Form.Field>
         <Form.Field className='input-container1'>
             <label>Authors</label>
-            <input placeholder='Robert C. Martin' onChange={(e) => setAuthors(e.target.value)} />
+            <input placeholder='Robert Carl' onChange={(e) => setAuthors(e.target.value)} />
         </Form.Field >
         <Form.Field >
             <label>Price</label>
